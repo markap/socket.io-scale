@@ -1,12 +1,16 @@
 /**
- * The first server listens to port 8090
+ * The server
  */
 
 var NODE_MODULES_PATH = '/usr/local/lib/node_modules/';
 var PORT = 8090;
 
+var port = process.argv[2] || PORT;
 
-var io = require(NODE_MODULES_PATH + 'socket.io').listen(PORT);
+console.log('server listens on port ' + port);
+
+
+var io = require(NODE_MODULES_PATH + 'socket.io').listen(port);
 var redis = require(NODE_MODULES_PATH + 'redis');
 
 var RedisStore = require(NODE_MODULES_PATH + 'socket.io/lib/stores/redis');

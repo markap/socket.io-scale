@@ -30,15 +30,18 @@ Install and run redis: http://redis.io/download/
 Run two socket.io server processes:
 
 ```bash
-node server8090.js
-node server8091.js
+node server.js // default port is 8090
+node server.js 8091
+node server.js 8092
+...
 ```
 
 Start as much clients you like:
 
 ```base
-node client8090.js
-node client8091.js
+node client.js // default port is 8090
+node client.js 8091
+node client.js 8092
 ```
 
 
