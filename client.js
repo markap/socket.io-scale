@@ -7,7 +7,7 @@ var NODE_MODULES_PATH = '/usr/local/lib/node_modules/';
 var PORT = 8090;
 var HOST = 'http://localhost';
 
-var port = process.argv[2] || PORT;
+var port = parseInt(process.argv[2]) || PORT;
 
 console.log('client connects to port ' + port);
 
